@@ -17,7 +17,7 @@ public class NuevaEmpresaServlet extends HttpServlet {
 
    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Nueva empresa registrada");
+		System.out.println("Empresa registrada");
 		
 		String nombreEmpresa = request.getParameter("nombre");
 		
