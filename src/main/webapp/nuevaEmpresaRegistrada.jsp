@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     
 <%
-	String empresa = "ALURA";
+	String empresa = (String) request.getAttribute("empresa");
 	System.out.println(empresa);
 %>
     
@@ -13,6 +13,6 @@
 <title>Nueva Empresa</title>
 </head>
 <body>
-	Empresa + nuevaEmpresa + registrada!
+	Empresa <%= empresa %> registrada!
 </body>
 </html>
