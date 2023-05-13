@@ -1,18 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
-<%
-	String empresa = (String) request.getAttribute("empresa");
-	System.out.println(empresa);
-%>
     
 <!DOCTYPE html>
+
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Nueva Empresa</title>
-</head>
-<body>
-	Empresa <%= empresa %> registrada!
-</body>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Nueva Empresa</title>
+	</head>
+	
+	<body>
+		Empresa ${ empresa } registrada!
+	</body>
+
 </html>
