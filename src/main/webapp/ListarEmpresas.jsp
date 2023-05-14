@@ -14,6 +14,10 @@
 	
 	<body>
 	
+		<c:if test="${ not empty empresa }">
+			Empresa ${ empresa } registrada!
+		</c:if>
+		
 		<h3><strong>Lista de Empresas: </strong></h3>
 		
 		<ul>
