@@ -30,9 +30,7 @@ public class MostrarEmpresaServlet extends HttpServlet {
 		request.setAttribute("empresas", empresa);
 		RequestDispatcher rd = request.getRequestDispatcher("/FormModificarEmpresa.jsp");
 		rd.forward(request, response);
-		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	
+			
 	}
 
 }

@@ -39,5 +39,7 @@ public class ModificarEmpresaServlet extends HttpServlet {
 		Empresa empresa = db.buscarEmpresaPorId(id);
 		empresa.setNombre(nombreEmpresa);
 		empresa.setFechaAbertura(fechaAbertura);
+		
+		response.sendRedirect("ListarEmpresas");
 	}
 }
