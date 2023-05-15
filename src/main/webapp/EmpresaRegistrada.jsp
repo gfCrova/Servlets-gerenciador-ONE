@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html>
-
+s
 	<head>
 		<meta charset="UTF-8">
 		<title>Nueva Empresa</title>

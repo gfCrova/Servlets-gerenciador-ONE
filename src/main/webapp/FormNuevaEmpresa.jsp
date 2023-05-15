@@ -5,7 +5,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Formulario</title>
+	<title>Menú Formulario</title>
 </head>
 
 <body>
