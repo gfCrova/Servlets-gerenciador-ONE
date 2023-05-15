@@ -25,7 +25,7 @@
 			<input type="text" name="fecha" value="<fmt:formatDate value="${ empresas.fechaAbertura }" pattern="dd/MM/yyyy"/>" />
 		</div>
 		<br>
-		<input type="text" name="id" value="${ empresas.id }"/>
+		<input type="hidden" name="id" value="${ empresas.id }"/>
 		<input type="submit"/>
 	
 	</form>
