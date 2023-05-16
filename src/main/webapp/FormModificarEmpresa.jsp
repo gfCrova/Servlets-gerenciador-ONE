@@ -1,7 +1,7 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
-<c:url value="/ModificarEmpresa" var="linkServletNuevaEmpresa" />
+<c:url value="entrada?accion=ModificarEmpresa" var="linkServletNuevaEmpresa" />
 
 <!DOCTYPE html>
 <html>
@@ -26,6 +26,7 @@
 		</div>
 		<br>
 		<input type="hidden" name="id" value="${ empresas.id }"/>
+		<input type="hidden" name="id" value="ModificarEmpresa"/>
 		<input type="submit"/>
 	
 	</form>
