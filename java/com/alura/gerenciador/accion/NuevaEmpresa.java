@@ -39,7 +39,7 @@ public void ejecutar(HttpServletRequest request, HttpServletResponse response) t
 	
 	request.setAttribute("empresas", empresa.getNombre());
 
-    response.sendRedirect("ListarEmpresas");
+    response.sendRedirect("entrada?accion=ListarEmpresas");
 	}
 
 }
