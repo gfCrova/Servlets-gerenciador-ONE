@@ -1,16 +1,18 @@
 package com.alura.gerenciador.servlet;
 
+import java.io.IOException;
+
+import com.alura.gerenciador.accion.EliminarEmpresa;
+import com.alura.gerenciador.accion.ListarEmpresas;
+import com.alura.gerenciador.accion.ModificarEmpresa;
+import com.alura.gerenciador.accion.MostrarEmpresas;
+import com.alura.gerenciador.accion.NuevaEmpresa;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-
-import com.alura.gerenciador.accion.EliminarEmpresa;
-import com.alura.gerenciador.accion.ListarEmpresas;
-import com.alura.gerenciador.accion.MostrarEmpresas;
-import com.alura.gerenciador.accion.ModificarEmpresa;
 
 @WebServlet("/entrada")
 public class EntradaServlet extends HttpServlet {
@@ -43,9 +45,9 @@ public class EntradaServlet extends HttpServlet {
 			EliminarEmpresa accion = new EliminarEmpresa();
 			accion.ejecutar(request, response);
 			
-		} else if(paramAccion.equals("EliminarEmpresas")) {
+		} else if(paramAccion.equals("NuevaEmpresa")) {
 			
-			EliminarEmpresa accion = new EliminarEmpresa();
+			NuevaEmpresa accion = new NuevaEmpresa();
 			accion.ejecutar(request, response);
 		}
 	}
