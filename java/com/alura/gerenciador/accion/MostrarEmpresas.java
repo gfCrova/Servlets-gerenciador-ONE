@@ -9,9 +9,9 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class MostrarEmpresas {
+public class MostrarEmpresas implements Accion{
 
-	public void ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
 		String paramId = request.getParameter("id");
@@ -26,8 +26,7 @@ public class MostrarEmpresas {
 		System.out.println(empresa.getNombre());
 		
 		request.setAttribute("empresas", empresa);
-		RequestDispatcher rd = request.getRequestDispatcher("/FormModificarEmpresa.jsp");
-		rd.forward(request, response);
 		
+		return "forward:FormModificarEmpresa.jsp";
 	}
 }

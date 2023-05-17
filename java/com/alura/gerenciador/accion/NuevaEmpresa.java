@@ -12,34 +12,35 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class NuevaEmpresa {
+public class NuevaEmpresa implements Accion{
 	
-public void ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			
+		System.out.println("Empresa registrada");
 		
+		String nombreEmpresa = request.getParameter("nombre");
+		String paramFechaAbertura = request.getParameter("fecha");
 		
-	System.out.println("Empresa registrada");
+		Date fechaAbertura = null;
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			fechaAbertura = sdf.parse(paramFechaAbertura);
+		} catch (ParseException e) {
+			throw new ServletException(e);
+		}
+		
+		Empresa empresa = new Empresa();
+		empresa.setNombre(nombreEmpresa);
+		empresa.setFechaAbertura(fechaAbertura);
+		
+		DB baseDeDatos = new DB();
+		baseDeDatos.agregarEmpresa(empresa);
+		
+		request.setAttribute("empresas", empresa.getNombre());
 	
-	String nombreEmpresa = request.getParameter("nombre");
-	String paramFechaAbertura = request.getParameter("fecha");
-	
-	Date fechaAbertura = null;
-	try {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		fechaAbertura = sdf.parse(paramFechaAbertura);
-	} catch (ParseException e) {
-		throw new ServletException(e);
-	}
-	
-	Empresa empresa = new Empresa();
-	empresa.setNombre(nombreEmpresa);
-	empresa.setFechaAbertura(fechaAbertura);
-	
-	DB baseDeDatos = new DB();
-	baseDeDatos.agregarEmpresa(empresa);
-	
-	request.setAttribute("empresas", empresa.getNombre());
-
-    response.sendRedirect("entrada?accion=ListarEmpresas");
+		return "redirect:entrada?accion=ListarEmpresas";
+		
 	}
 
 }
