@@ -19,6 +19,8 @@ s
 			Ninguna empresa registrada!
 		</c:if>
 		
+		<c:import url="LogoutParcial.jsp"></c:import>
+		
 	</body>
 
 </html>

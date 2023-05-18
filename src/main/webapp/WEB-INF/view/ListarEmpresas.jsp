@@ -13,6 +13,10 @@
 	
 	<body>
 	
+		Usuario Logueado: ${ LoginUsuario.login }
+		
+		<c:import url="LogoutParcial.jsp"></c:import>
+	
 		<c:if test="${ not empty empresa }">
 			Empresa ${ empresa } registrada!
 		</c:if>

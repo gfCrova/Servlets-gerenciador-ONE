@@ -29,5 +29,8 @@
 	
 	</form>
 	
+	<c:import url="LogoutParcial.jsp"></c:import>
+	
+	
 </body>
 </html>
