@@ -10,10 +10,17 @@ import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 public class ListarEmpresas implements Accion{
 	
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession sesion = request.getSession();
+		if(sesion.getAttribute("LoginUsuario") == null) {
+			return "redirect:entrada?accion=FormLogin";
+		}
+		
 		System.out.println("Listando las empresas");
 		
 		DB baseDeDatos = new DB();
