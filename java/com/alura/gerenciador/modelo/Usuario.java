@@ -21,12 +21,12 @@ public class Usuario {
 	
 	public boolean esIgual(String login, String password) {
 		if(this.login.equals(login)) {
-			return false;
+			return true;
 		}
 		if(this.password.equals(password)) {
-			return false;
+			return true;
 		}
-		return true;
+		return false;
 	}
 	
 }
