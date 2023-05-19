@@ -14,4 +14,32 @@
     <servlet-name>Entrada</servlet-name>
     <url-pattern>/Entrada</url-pattern>
   </servlet-mapping>
+  <filter>
+    <display-name>MonitoreoFilter</display-name>
+    <filter-name>MonitoreoFilter</filter-name>
+    <filter-class>com.alura.gerenciador.servlet.MonitoreoFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>MonitoreoFilter</filter-name>
+    <url-pattern>/entrada</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>AutorizacionFilter</display-name>
+    <filter-name>AutorizacionFilter</filter-name>
+    <filter-class>com.alura.gerenciador.servlet.AutorizacionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AutorizacionFilter</filter-name>
+    <url-pattern>/entrada</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>ControladorFilter</display-name>
+    <filter-name>ControladorFilter</filter-name>
+    <filter-class>com.alura.gerenciador.servlet.ControladorFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ControladorFilter</filter-name>
+    <url-pattern>/entrada</url-pattern>
+  </filter-mapping>
+
 </web-app>
