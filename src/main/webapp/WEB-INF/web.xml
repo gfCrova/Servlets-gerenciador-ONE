@@ -4,16 +4,7 @@
   <welcome-file-list>
     <welcome-file>Bienvenido.html</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <description></description>
-    <display-name>Entrada</display-name>
-    <servlet-name>Entrada</servlet-name>
-    <servlet-class>com.alura.gerenciador.servlet.Entrada</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Entrada</servlet-name>
-    <url-pattern>/Entrada</url-pattern>
-  </servlet-mapping>
+  
   <filter>
     <display-name>MonitoreoFilter</display-name>
     <filter-name>MonitoreoFilter</filter-name>
