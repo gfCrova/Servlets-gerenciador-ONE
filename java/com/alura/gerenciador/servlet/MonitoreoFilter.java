@@ -9,11 +9,13 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebFilter;
 
-@WebFilter(urlPatterns = "/entrada")
+//@WebFilter(urlPatterns = "/entrada")
 public class MonitoreoFilter implements Filter{
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		
+		System.out.println("Monitoreo Filter");
 		
 		long antes = System.currentTimeMillis();
 

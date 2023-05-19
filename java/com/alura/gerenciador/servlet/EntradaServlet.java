@@ -20,7 +20,7 @@ public class EntradaServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		String paramAccion = request.getParameter("accion");
-		HttpSession sesion = request.getSession();
+		/*HttpSession sesion = request.getSession();
 		
 		Boolean noEstaLogueado = (sesion.getAttribute("LoginUsuario") == null);
 		Boolean noEsUnaAccionProtegida = !(paramAccion.equals("Login") || paramAccion.equals("FormLogin"));
@@ -28,7 +28,7 @@ public class EntradaServlet extends HttpServlet {
 		if(noEstaLogueado && noEsUnaAccionProtegida) {
 			response.sendRedirect("entrada?accion=FormLogin");
 			return;
-		}
+		}*/
 		
 		String nombreDeClase = "com.alura.gerenciador.accion." + paramAccion;
 		String nombre;
